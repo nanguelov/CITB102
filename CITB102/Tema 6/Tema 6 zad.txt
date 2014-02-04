@@ -1,0 +1,194 @@
+Това задание не е задължително (т.е. не влиза в 100-те точки за определяне на оценката от Текущ Контрол), но ще участва в определянето на бонус точките на края на семестъра.
+
+1. Палиндром
+
+Програмата ви трябва да приема като вход string и трябва да изведе "yes" или "no" в зависимост от това дали е палиндром (чете се еднакво от ляво на дясно и от дясно на ляво). Изходът да завършва с нов ред.
+
+пр. 1
+
+Input: alabala
+
+Output: yes
+
+Пр. 2
+
+Input: alab4la
+
+Output: no
+
+*Насоки:Използвайте методите на string rbegin и rend, заедно с подходящ конструктор на string
+
+2. Довършете класа Time. Местата, които трябва да довършите, са маркирани с коментар "for homework".
+
+#include <iostream>
+#include <iomanip>
+#include <string>
+#include <algorithm>
+ 
+using namespace std;
+ 
+class Time
+{
+private:
+    int h;
+    int m;
+    int s;
+public:
+    Time()
+    {
+        time_t now;
+        time(&now);
+        tm* t = localtime(&now);
+ 
+        h=t->tm_hour;
+        m=t->tm_min;
+        s=t->tm_sec;
+    }
+ 
+    Time(int hour, int minute, int seconds)
+    {
+        h = hour % 24;
+        m = minute % 60;
+        s = seconds % 60;
+    }
+ 
+    Time(int seconds)
+    {
+        h=0;
+        m=0;
+        s=0;
+        add_seconds(seconds);
+    }
+ 
+    void print()
+    {
+        //for homework format 00:00:00, see iomanip's setw and setfill
+        cout << h << ":" << m << ":" << s << endl;
+    }
+ 
+    void add_seconds(int seconds)
+    {
+        s += seconds;
+        int minutes = s/60;
+        s = s%60;
+        add_minutes(minutes);
+    }
+ 
+    void add_minutes(int minutes)
+    {
+        m += minutes;
+        int hours = m/60;
+        m = m%60;
+        h = (h + hours)%24;
+    }
+ 
+    int get_hour()
+    {
+        return h;
+    }
+ 
+    int set_hour(int hour)
+    {
+        h = hour%24;
+    }
+ 
+    int seconds_from(Time t)
+    {
+        //for homework, improve
+        return (h*3600+m*60+s) - (t.h*3600+t.m*60+t.s);
+    }
+ 
+    Time time_from(Time t)
+    {
+        int seconds = (h*3600+m*60+s);
+        int tSeconds = (t.h*3600+t.m*60+t.s);
+        int diff = seconds-tSeconds;
+        return Time(diff);
+    }
+};
+ 
+int main()
+{
+    Time now;
+    now.print();//hh:mm:ss 23:04:58
+ 
+    //now.add_seconds(3665);
+    //now.print();
+ 
+    Time deadline(11, 10, 0);
+    deadline.print();
+    cout << deadline.seconds_from(now) << endl;
+ 
+    Time left = deadline.time_from(now);
+    left.print();
+ 
+ 
+    return 0;
+}
+3. Довършете класа Circle. Местата, които трябва да довършите, са маркирани с коментар "for homework".
+
+#include <iostream>
+#include <string>
+ 
+using namespace std;
+ 
+class Circle
+{
+private:
+    double r;
+public:
+    Circle(double radius): r(radius)
+    {
+    }
+ 
+    double get_radius()
+    {
+        return r;
+    }
+ 
+    double get_perimeter()
+    {
+        //for homework
+    }
+}
+ 
+int main()
+{
+    double radius;
+    cin >> radius;
+     
+    Circle c(radius);
+ 
+    cout << c.get_radius << endl;
+    cout << c.get_perimeter();
+    cout << c.get_area();//for homework
+ 
+    return 0;
+}
+4. Напишете клас Triangle. 
+
+#include <iostream>
+#include <string>
+ 
+using namespace std;
+ 
+//for homework
+ 
+int main()
+{
+    double a, b, c;
+    cin >> a >> b >> c;
+     
+    Triangle t(a, b, c);
+ 
+    if(!t.exists())
+    {
+        cout << "No such triangle!" << endl;
+        return 0;
+    }
+ 
+    cout << t.get_perimeter() << endl;
+    cout << t.get_area() << endl;
+ 
+    return 0;
+}

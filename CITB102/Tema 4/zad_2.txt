@@ -1,0 +1,61 @@
+1. Разшифровай картата
+
+2...9            -                     Two,Three,Found...Nine
+A                 -                     Ace
+J                 -                      Jack
+Q                 -                     Queen
+K                 -                     King
+D                 -                     Diamonds
+H                 -                     Hearts
+S                 -                     Spades
+C                 -                     Clubs
+Input: QS
+
+Output: Queen of spades
+
+----
+
+Input: 2C
+
+Output: Two of cubes
+
+2. Най-голямото число
+
+Output: Enter number 1:
+
+Input: 5
+
+Output: Enter number 2:
+
+Input: 7
+
+Output: Enter number 3:
+
+Input: 13
+
+Output: The largest number is 13
+
+*Програмата трябва да работи с десетични дроби
+
+3. Оценки
+
+Дадена е следната таблица
+
+A - 4
+B - 3
+C - 2
+D - 1
+F - 0
+Възможно е да има + или - накрая, които добавявят и махат респективно по 0.3 (има 2 изключения - A+ = 4, F- = 0, вместо на 4.3 и -0.7)
+
+Input: A+
+
+Output: 4
+
+Input: C+
+
+Output: 2.3
+
+Input: F-
+
+Output: 0

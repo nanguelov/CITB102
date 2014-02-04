@@ -1,0 +1,21 @@
+4
+11
+22
+33
+44
+print
+shift_left
+print
+shift_right
+print
+add 2 8
+print
+shift_left
+shift_left
+shift_left
+print
+remove 1
+print
+shift_right
+print
+exit

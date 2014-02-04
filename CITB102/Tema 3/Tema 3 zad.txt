@@ -1,0 +1,89 @@
+1. Да се напише следната програма
+
+Output: Enter a number:
+
+Input: 5
+
+Output: 5^2 = 25, 5^3 = 125, 5^4 = 625, 5^5 = 3125
+
+2. Да се напише следната програма
+
+Output: Enter a:
+
+Input: 5
+
+Output: Enter b:
+
+Input: 6
+
+Output: 
+
+a + b = 11
+
+a - b = -1
+
+a * b = 30
+
+a / b = 0,833333...
+
+3. Да се напише следната програма
+
+Output: Enter a number in meters:
+
+Input: 600
+
+Output: 
+
+600 m = 0.6 km
+
+600 m = 6000 dm
+
+600 m = 60000 cm
+
+4. Да се напише следната програма
+
+Output: Enter price of something(lv):
+
+Input: 3.45
+
+Output: Enter amount(lv): 
+
+Input: 5
+
+Output: Your change is 1.55lv (155st)
+
+5. Да се напише следната програма
+
+Output: Enter drive letter:
+
+Input: C
+
+Output: Enter path:
+
+Input: Windows
+
+Output: Enter file name:
+
+Input: kernel.dll
+
+Output: C:\Windows\kernel.dll
+
+6. Да се напише следната програма
+
+Output: Enter a tank size:
+
+Input: 50
+
+Output: Enter fuel efficiency (km per liter):
+
+Input: 10
+
+Output: Enter price per liter:
+
+Input: 2.45
+
+Output: 
+
+We can travel 500km.
+
+For every 100km it will cost 24.5lv.
